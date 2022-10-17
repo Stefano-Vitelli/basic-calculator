@@ -1,0 +1,94 @@
+* {
+  color: #fff;
+  font-family: "Faunces", serif;
+}
+
+body {
+  margin: 0;
+  background-color: #224870;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculadora {
+  display: grid;
+  grid-template-columns: repeat(4, 75px);
+  grid-template-rows: 160px repeat(5, 75px);
+  background: #00916e;
+  padding: 15px;
+  border-radius: 32px;
+  box-shadow: 15px 10px 0px 5px #00000033;  /*1er valor: eje x, 2do: eje y, 3ro: difuminado 0px, 4to: cuan grande es la sombra, color + opaci*/
+}
+
+button {
+  cursor: pointer;
+  margin: 5px;
+  padding: 0px;
+  border-radius: 32px;
+  font-size: 1.5em;
+  border: none;
+  background-color: #00916e;
+  box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00ffc11f;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  background-color: #006f54;
+}
+
+button:hover {
+  font-size: 30px;
+}
+
+.display {
+  grid-column: 1 / -1;  /*grid: cuadricula. Hace que el contenido vaya de una punta a la otra. En este caso genera espacio en eje X de 1 a -1*/
+  padding: 16px; 
+  display: flex;
+  margin: 10px 10px 20px; /*genera 10 px hacia arriba, 10 hacia los costados y 20px hacia abajo*/
+  flex-direction: column; /*para que se vea el contenido, uno encimad el otro y no al costado*/
+  align-items: flex-end;
+  background-color: #363636;
+  box-shadow: 0px 0px 0px 10px #00000030;
+  justify-content: space-between;
+  text-align: center;
+  border-radius: 32px;
+  word-break: break-all;
+}
+
+.col-2 {
+  grid-column: span 2;
+}
+
+#valor_actual {
+  font-size: 2em;
+}
+
+#valor_anterior {
+  font-size: 1.5em;
+}
+
+.encabezado {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  margin: 25px;
+  box-shadow: 5px 5px 5px 3px #363636;
+  flex-direction: row;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+ }
+
+ .content {
+  overflow-y: auto;
+ }
+
